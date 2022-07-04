@@ -18,5 +18,13 @@ class Category extends Model
         'slug',
     ];
     
+    /**
+     * Get the posts for the user.
+     */
+    public function posts()
+    {
+        return $this->hasMany('App\Models\Post');
+    }
+    
     use HasFactory;
 }

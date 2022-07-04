@@ -25,8 +25,6 @@ class CreatePostsTable extends Migration
             $table->boolean('is_published')->default(false);
             $table->timestamps();
         });
-
-        $table->bigInteger('user_id');
     }
 
     /**

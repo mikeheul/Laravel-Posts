@@ -18,5 +18,10 @@ class Tag extends Model
         'slug',
     ];
     
+    public function posts()
+    {
+        return $this->belongsToMany('App\Models\Post');
+    }
+
     use HasFactory;
 }

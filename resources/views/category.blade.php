@@ -8,7 +8,7 @@
 @endsection
 
 @section('title')
-    <title>{{setting('site.title')}}</title>
+    <title>{{setting('site.title')}} - Categories:{{$category['name']}}</title>
 @endsection
 
 @section('content')
@@ -16,16 +16,11 @@
         <!-- Blog Entries Column -->
         <div class="col-md-8">
 
-            <h1 class="my-4">Laravel Blog
-                <small>Page d'accueil</small>
+            <h1 class="my-4">Catégories:
+                <small>{{$category['name']}}</small>
             </h1>
 
             @include('_partials.posts-list')
-
-            <!-- Pagination -->
-            <ul class="pagination justify-content-center mb-4">
-                {{$posts->links("pagination::bootstrap-4")}}
-            </ul>
 
         </div>
         @include('_partials.sidebar')

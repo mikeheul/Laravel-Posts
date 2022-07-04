@@ -31,4 +31,17 @@ class Post extends Model
     {
         return $this->belongsTo('App\Models\User');
     }
+
+    /**
+     * Get the category that owns the post.
+     */
+    public function category()
+    {
+        return $this->belongsTo('App\Models\Category');
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany('App\Models\Tag');
+    }
 }
